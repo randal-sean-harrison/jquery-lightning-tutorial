@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Introduction to Bootstrap</title>
+
+   <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+   <link rel="manifest" href="favicons/manifest.json">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+   <meta name="theme-color" content="#ffffff">
+
+
+
+
+   <!-- Bootstrap -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+   <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+   <!-- <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"> -->
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+
+
+   <!-- ND Styles -->
+   <link rel="stylesheet" href="css/main.css">
+
+   <style media="screen">
+      #page-title {
+         color: #FFFFFF;
+      }
+
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+      }
+
+      #instructions-footer {
+         margin-top: 6rem;
+      }
+
+      .header-white-style {
+         color: #FFFFFF;
+      }
+
+      a.header-white-style:hover {
+         color: #FFFFFF;
+         opacity: .7;
+      }
+
+      div.pre-footer {
+         background: transparent;
+      }
+
+      footer {
+         background: transparent;
+         border: none;
+      }
+
+      header {
+         margin-bottom: 9rem;
+      }
+
+      header nav {
+         background: #6f5499 !important;
+         padding-bottom: 1rem;
+      }
+
+      .linenums li {
+         list-style-type: decimal;
+      }
+   </style>
+
+   <!-- includes for Google's code highlighter 'prettyprint'
+   <link rel="stylesheet" type="text/css" href="css/prettify.css">
+   <script type="text/javascript" src="js/prettify.js"></script> -->
+
+   <!-- includes for Google's code highlighter 'prettyprint' -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+
+   <!-- header ----------------------------->
+
+   <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+         <div class="container">
+            <div class="col-sm-8">
+               <h1 id="page-title"><i class="fa fa-code fa-fw" aria-hidden="true"></i> Introducing Bootstrap 3</h1>
+            </div>
+            <div class="col-sm-4">
+               <p class="text-right" style="margin-top:30px;"><a style="color:white;" href="https://getbootstrap.com/docs/3.3/" target="_blank"><i class="fa fa-cloud-download fa-spacer-right" aria-hidden="true"></i>Download Bootstrap 3.3.7</a></p>
+            </div>
+
+         </div>
+      </nav>
+   </header>
+
+   <!-- header closes ----------------------------->
+
+   <!-- Main Content ----------------------------->
+
+   <div class="container" id="main-container">
+
+      <div class="page-header">
+
+         <div w3-include-html="navmenu.html"></div>
+
+      </div>
+      <!-- page header closes -->
+
+      <div id="masthead">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1>An HTML + CSS + JS Front-end Framework</h1>
+                  <blockquote>We will be using Bootstrap 3.3.7 for this website. While Bootstrap 4 offers exciting new features, it's still in beta. More importantly, it does not support older browsers. For these reasons, it's not recommended for sites which must be accessible to all audiences, on all devices.</blockquote>
+               </div>
+            </div>
+            <!-- .row -->
+         </div>
+         <!--/container-->
+      </div>
+      <!--/masthead-->
+
+      <div class="container">
+         <div class="row">
+
+            <!--left column-->
+            <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
+               <ul class="nav nav-stacked" id="sidebar">
+                  <li><a href="#sec0">Open a Code Editor</a></li>
+                  <li><a href="#sec1">Create an HTML page</a></li>
+                  <li><a href="#sec2">Add a Container</a></li>
+                  <li><a href="#sec3">Add a Jumbotron</a></li>
+                  <li><a href="#sec4">Add Rows</a></li>
+                  <li><a href="#sec5">Add Navigation</a></li>
+                  <li><a href="#sec6">Coding Challenge...</a></li>
+                  <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
+               </ul>
+            </div>
+
+            <!--right column-->
+            <div class="col-md-9" id="rightCol">
+
+               <div class="row topper" id="sec0">
+
+
+                  <!-- Step 0 ---------------------------------------------------------------------- -->
+
+                  <div class="col-md-1">
+                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'>0</h1>
+                  </div>
+                  <!-- col-md-1 -->
+
+                  <div class="col-md-11">
+                     <h2>Open a Code Editor</h2>
+                     <p class="lead">You'll need a code editor to assemble the following code snippets.</p>
+
+                     <div class='alert alert-warning' role='alert'>
+                        <p><i class='fa fa-exclamation-triangle fa-spacer-right' aria-hidden='true'></i><strong class='capitalized'>Saving Your Work...</strong><br/>If you choose Thimble, note that you will need to create and account or sign in if you wish to save the site you create.</p>
+                     </div>
+
+                     <table class='table'>
+                        <thead>
+                           <tr>
+                              <th style='width:15%;'>Type</th>
+                              <th style='width:40%;'>Name</th>
+                              <th style='width:45%;'>Notes</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td><i class="fa fa-cloud fa-spacer-left" aria-hidden="true"></i></td>
+                              <td><a href="https://thimble.mozilla.org/en-US/" target="_blank">Thimble (Mozilla)</a></td>
+                              <td>Sign in required to save your site</td>
+                           </tr>
+                           <tr>
+                              <td><i class="fa fa-laptop fa-spacer-left" aria-hidden="true"></i></td>
+                              <td><a href="https://atom.io/" target="_blank">Atom (GitHub)</a></td>
+                              <td>Recommended packages:<br/> + <a href="https://atom.io/packages/atom-beautify" target="_blank">Atom Beautify</a><br/> + <a href="https://atom.io/packages/emmet" target="_blank">Emmet</a><br/> + <a href="https://atom.io/packages/atom-bootstrap3"
+                                    target="_blank">Atom Bootstrap-3</a>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+
+                  </div>
+
+               </div>
+               <!-- row -->
+
+               <div class="row topper" id="sec1">
+
+                  <!-- Step 1 ---------------------------------------------------------------------- -->
+
+                  <div class="col-md-1">
+                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'>1</h1>
+                  </div>
+                  <!-- col-md-1 -->
+
+                  <div class="col-md-11">
+
+                     <h2>Create an HTML Page</h2>
+                     <p class="lead">Begin with the shell of an HTML5 page, with includes of both <strong>Bootstrap 3.3.7</strong> and the latest version of <strong>jQuery</strong>. I've also inlcuded a link to the <a href="http://fontawesome.io/icons/" target="_blank">Font Awesome Web icons library</a>. Make sure to save your page, if necessary.</p>
+
+                     <div class="well">
+
+                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well0" data-toggle="tooltip" data-placement="left" title="copy HTML">
+                                       <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                       </button>
+
+                        <pre class="prettyprint linenums" id="well0">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+   &lt;head&gt;
+
+      &lt;!-- Metadata for the Webpage --&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+      &lt;title&gt;Title&lt;/title&gt;
+
+      &lt;!-- Bootstrap CSS files--&gt;
+      &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"&gt;
+
+      &lt;!-- Font Awesome Web Icons --&gt;
+      &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
+
+   &lt;/head&gt;
+   &lt;body&gt;
+
+
+      &lt;!-- [ This is where your body content will go... ] --&gt;
+
+
+      &lt;!-- jQuery Javascript Library (required by Bootstrap) --&gt;
+      &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;
+      &lt;!-- Bootstrap Library --&gt;
+      &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"&gt;&lt;/script&gt;
+
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+                     </div>
+
+
+                  </div>
+                  <!-- col-md-11 -->
+
+               </div>
+               <!-- row -->
+
+
+
+               <div class="row topper" id="sec2">
+
+                  <!-- Step 1 ---------------------------------------------------------------------- -->
+
+                  <div class="col-md-1">
+                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'>2</h1>
+                  </div>
+                  <!-- col-md-1 -->
+
+                  <div class="col-md-11">
+
+                     <h2>Add a Container <small style="color: grey">(wrapper)</small></h2>
+                     <p class="lead">The 12-column Bootstrap grid is built by stacking limitless <strong>rows</strong> inside of a single wrapping <strong>container</strong>. (You may nest containers, though typically you'll add a single container, with multiple rows inside of it.)</p>
+
+                     <p class="lead">If whitespace is not your thing, use a full-width layout by changing the class of your wrapping container from <code>class="container"</code> to <code>class="container-fluid"</code>.</p>
+
+                     <div class="well">
+
+                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well1" data-toggle="tooltip" data-placement="left" title="copy HTML">
+                                       <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                       </button>
+
+<pre class="prettyprint linenums" id="well1">
+&lt;div class="container"&gt;
+   &lt!-- Your rows go here --&gt;
+&lt;/div&gt;
+</pre>
+
+                     </div>
+
+                  </div>
+                  <!-- col-md-11 -->
+
+               </div>
+               <!-- row -->
+
+
+               <div class="row topper" id="sec3">
+
+                  <!-- Step 1 ---------------------------------------------------------------------- -->
+
+                  <div class="col-md-1">
+                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'>3</h1>
+                  </div>
+                  <!-- col-md-1 -->
+
+                  <div class="col-md-11">
+
+                     <h2>Add a Jumbotron</h2>
+                     <p class="lead">Let's add a Jumbotron to the top of the page. To remove its rounded corners and force the jumbotron to take up the full width of the screen, add it before the main <code>.container</code> div.</p>
+
+
+
+                     <div class="well">
+
+                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well2" data-toggle="tooltip" data-placement="left" title="copy HTML">
+                                       <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                       </button>
+
+<pre class="prettyprint linenums" id="well2">
+&lt;div class="jumbotron"&gt;
+
+  &lt;h1&gt;Hello, world!&lt;/h1&gt;
+
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing.&lt;/p&gt;
+  &lt;p&gt;
+     &lt;a class="btn btn-primary btn-lg" href="#" role="button"&gt;Learn more&lt;/a&gt;
+  &lt;/p&gt;
+
+&lt;/div&gt;
+</pre>
+
+                     </div>
+
+                  </div>
+                  <!-- col-md-11 -->
+
+               </div>
+               <!-- row -->
+
+               <div class="row topper" id="sec4">
+
+                  <!-- Step 1 ---------------------------------------------------------------------- -->
+
+                  <div class="col-md-1">
+                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'>4</h1>
+                  </div>
+                  <!-- col-md-1 -->
+
+                  <div class="col-md-11">
+
+                     <h2>Add Rows</h2>
+                     <p class="lead">Add a row with 4 columns (for a large monitor), 2 columns (for a medium device), and 1 column (for a small device) inside the <strong>container</strong> div.</p>
+
+                     <div class="well">
+
+                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well3" data-toggle="tooltip" data-placement="left" title="copy HTML">
+                                       <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                       </button>
+
+<pre class="prettyprint linenums" id="well3">
+&lt;div class="row"&gt;
+
+   &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt;
+      &lt!-- Your Add a thumbnail --&gt;
+      Lorem ipsum dolor.
+   &lt;/div&gt;
+
+   &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt;
+      &lt!-- Your Add a thumbnail --&gt;
+      Lorem ipsum dolor.
+   &lt;/div&gt;
+
+   &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt;
+      &lt!-- Your middle Column Content Goes Here --&gt;
+      Lorem ipsum dolor.
+   &lt;/div&gt;
+
+   &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt;
+      &lt!-- Your right Column Content Goes Here --&gt;
+      Lorem ipsum dolor.
+   &lt;/div&gt;
+
+&lt;/div&gt;
+</pre>
+
+                     </div>
+
+                  </div>
+                  <!-- col-md-11 -->
+
+               </div>
+               <!-- row -->
+
+
+
+               <div class="row topper" id="sec5">
+                  <!-- Step 2 ---------------------------------------------------------------------- -->
+
+                  <div class="col-md-1">
+                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'>5</h1>
+                  </div>
+                  <!-- col-md-1 -->
+
+                  <div class="col-md-11">
+
+                     <h2>Don't Forget The Navigation!</h2>
+                     <p class="lead">Add the navigation element to the page. To shift the navbar darker, add the <code>.navbar-inverse</code> class.</p>
+                     <div class="well">
+
+                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well4" data-toggle="tooltip" data-placement="left" title="copy HTML">
+                                       <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                       </button>
+
+<pre class="prettyprint linenums" id="well4">
+&lt;nav class="navbar"&gt;
+   &lt;div class="container"&gt;
+
+     &lt;div class="navbar-header"&gt;
+       &lt;a class="navbar-brand" href="#"&gt;MY COOL WEBSITE&lt;/a&gt;
+     &lt;/div&gt; &lt;!-- .navbar-header --&gt;
+
+     &lt;div id="navbar"&gt;
+       &lt;ul class="nav navbar-nav pull-right"&gt;
+         &lt;li class="active"&gt;&lt;a href="index.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href="teaching.html"&gt;Teaching&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href="research.html"&gt;Research&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+       &lt;/ul&gt;
+     &lt;/div&gt;
+
+   &lt;/div&gt; &lt;!-- .container --&gt;
+&lt;/nav&gt; &lt;!-- .nav --&gt;
+</pre>
+
+                     </div>
+
+                  </div>
+                  <!-- col-md-11 -->
+
+               </div>
+               <!-- row -->
+
+
+<div class="row topper" id="sec6">
+
+   <!-- Step 6 ---------------------------------------------------------------------- -->
+
+   <div class="col-md-1">
+      <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'>6</h1>
+   </div>
+   <!-- col-md-1 -->
+
+   <div class="col-md-11">
+
+      <h2>Design Challenge <small><span class='label label-default'>Optional</span></small></h2>
+      <p class="lead">You may take this time to explore the Bootstrap Documentation and experiment with adding specific interface elements.</p>
+      <h3>OR</h3>
+      <p class="lead">You may attempt to recreate the page structure below using elements we've worked with in this workshop, as well pulling code for any additional elements you need from the Bootstrap Documentation.</p>
+      <div class="example">
+
+
+         <button id="hint-button" style="margin-bottom: 25px" class="btn btn-primary pull-right" type="button" data-toggle="tooltip" data-placement="left" title="Get Hint">
+         <i id="visibility-indicator" class="fa fa-eye" aria-hidden="true"></i>
+         </button>
+
+         <img id="image-before" class="img img-responsive" src="img/before.png" alt="image of the challenge web page">
+         <img id="image-after" class="img img-responsive hidden" src="img/after.png" alt="blocked out image of the challenge web page">
+
+      </div>
+
+
+
+   </div>
+   <!-- col-md-11 -->
+
+</div>
+<!-- .row -->
+
+
+
+
+            </div>
+            <!-- .row -->
+
+
+
+         </div>
+         <!--/right-->
+      </div>
+      <!--/row-->
+   </div>
+   <!--/container-->
+
+
+   </div>
+   <!-- .container -->
+
+   <!-- Main Content closes ----------------------------->
+
+
+   <!-- Footer ----------------------------->
+   <div id="handbook-footer">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-sm-6">
+               <i class="fa fa-copyright" aria-hidden="true"></i><span id="thisYear"></span> Randal Sean Harrison
+            </div>
+            <div class="col-sm-6">
+               <p class="text-right"><a href="https://github.com/randal-sean-harrison" target="_blank"><i class="fa fa-github fa-fw" aria-hidden="true"></i> randal-sean-harrison</a></p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="js/jquery-3.2.1.min.js"></script>
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   <!-- Include for the Back to top button -->
+   <script src="js/back-to-top.js"></script>
+   <!-- Scrollspy / affix js -->
+   <script src="js/scripts.js"></script>
+
+   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+   <!-- html include script -->
+   <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+   <!-- Copy Button (clipboard.min.js) include -->
+   <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+
+   <script type="text/javascript">
+      $(document).ready(function() {
+
+
+         // ------- Display the address box --------------------------
+         $('#displayProfile').click(function() {
+
+            // whaaaaaaaaaa ?
+
+         });
+
+         $('#clearProfile').click(function() {
+            location.reload(true);
+         });
+
+         $('#hint-button').click(function() {
+
+            if ($('#image-before').hasClass('hidden')) {
+               $('#image-before').removeClass('hidden');
+               $('#image-after').addClass('hidden');
+               $('#visibility-indicator').removeClass('fa-eye')
+               $('#visibility-indicator').addClass('fa-eye-slash');
+            } else {
+               $('#image-before').addClass('hidden');
+               $('#image-after').removeClass('hidden');
+               $('#visibility-indicator').removeClass('fa-eye-slash');
+               $('#visibility-indicator').addClass('fa-eye');
+            }
+         });
+
+      });
+
+      // clipboard button
+      new Clipboard('.btn');
+
+      // tooltips add
+      $(function() {
+         $('[data-toggle="tooltip"]').tooltip()
+      })
+
+
+   </script>
+
+
+</body>
+
+</html>
