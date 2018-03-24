@@ -5,7 +5,7 @@
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Introduction to Bootstrap</title>
+   <title>Up-and-Runing with Bootstrap 3</title>
 
    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
@@ -111,7 +111,7 @@
       <nav class="navbar navbar-default navbar-fixed-top">
          <div class="container">
             <div class="col-sm-8">
-               <h1 id="page-title"><i class="fa fa-code fa-fw" aria-hidden="true"></i> Introducing Bootstrap 3</h1>
+               <h1 id="page-title"><i class="fa fa-code fa-fw" aria-hidden="true"></i> Up-and-Running with Bootstrap 3</h1>
             </div>
             <div class="col-sm-4">
                <p class="text-right" style="margin-top:30px;"><a style="color:white;" href="https://getbootstrap.com/docs/3.3/" target="_blank"><i class="fa fa-cloud-download fa-spacer-right" aria-hidden="true"></i>Download Bootstrap 3.3.7</a></p>
@@ -139,7 +139,8 @@
             <div class="row">
                <div class="col-md-12">
                   <h1>An HTML + CSS + JS Front-end Framework</h1>
-                  <blockquote>We will be using Bootstrap 3.3.7 for this website. While Bootstrap 4 offers exciting new features, it's still in beta. More importantly, it does not support older browsers. For these reasons, it's not recommended for sites which must be accessible to all audiences, on all devices.</blockquote>
+                  <blockquote>We will be using <a href="https://getbootstrap.com/docs/3.3/" target="_blank">Bootstrap 3.3.7</a> for this website. While <a href="https://getbootstrap.com/" target="_blank">Bootstrap 4</a> offers exciting new features, it's still in beta. More importantly, it does not support older browsers. For these reasons, it's not recommended for sites which must
+                     be accessible to all audiences, on all devices.</blockquote>
                </div>
             </div>
             <!-- .row -->
@@ -158,9 +159,9 @@
                   <li><a href="#sec1">Create an HTML page</a></li>
                   <li><a href="#sec2">Add a Container</a></li>
                   <li><a href="#sec3">Add a Jumbotron</a></li>
+                  <li><a href="#sec2b">Add a Navbar</a></li>
                   <li><a href="#sec4">Add Rows</a></li>
-                  <li><a href="#sec5">Add Navigation</a></li>
-                  <li><a href="#sec6">Coding Challenge...</a></li>
+                  <li><a href="#sec5">Add UI Elements</a></li>
                   <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
             </div>
@@ -174,7 +175,7 @@
                   <!-- Step 0 ---------------------------------------------------------------------- -->
 
                   <div class="col-md-1">
-                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'>0</h1>
+                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'><i class="fa fa-check" aria-hidden="true"></i></h1>
                   </div>
                   <!-- col-md-1 -->
 
@@ -183,7 +184,8 @@
                      <p class="lead">You'll need a code editor to assemble the following code snippets.</p>
 
                      <div class='alert alert-warning' role='alert'>
-                        <p><i class='fa fa-exclamation-triangle fa-spacer-right' aria-hidden='true'></i><strong class='capitalized'>Saving Your Work...</strong><br/>If you choose Thimble, note that you will need to create and account or sign in if you wish to save the site you create.</p>
+                        <p><i class='fa fa-exclamation-triangle fa-spacer-right' aria-hidden='true'></i><strong class='capitalized'>Saving Your Work...</strong><br/>If you choose Thimble, note that you will need to create and account or sign in if you wish
+                           to save the site you create.</p>
                      </div>
 
                      <table class='table'>
@@ -220,14 +222,14 @@
                   <!-- Step 1 ---------------------------------------------------------------------- -->
 
                   <div class="col-md-1">
-                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'>1</h1>
+                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'><i class="fa fa-check" aria-hidden="true"></i></h1>
                   </div>
                   <!-- col-md-1 -->
 
                   <div class="col-md-11">
 
                      <h2>Create an HTML Page</h2>
-                     <p class="lead">Begin with the shell of an HTML5 page, with includes of both <strong>Bootstrap 3.3.7</strong> and the latest version of <strong>jQuery</strong>. I've also inlcuded a link to the <a href="http://fontawesome.io/icons/" target="_blank">Font Awesome Web icons library</a>. Make sure to save your page, if necessary.</p>
+                     <p class="lead">Begin with the shell of an HTML5 page, with includes of both <strong>Bootstrap 3.3.7</strong> and the latest version of <strong>jQuery</strong>. I've also inlcuded a link to the <a href="http://fontawesome.io/icons/" target="_blank">Font Awesome Web icons library</a>. Bootstrap also offers their own <a href="https://getbootstrap.com/docs/3.3/components/#glyphicons" target="_blank">Glyphicons</a> web fonts.</p>
 
                      <div class="well">
 
@@ -247,10 +249,16 @@
       &lt;title&gt;Title&lt;/title&gt;
 
       &lt;!-- Bootstrap CSS files--&gt;
-      &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"&gt;
+      &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"&gt;
+
+      &lt;!-- jQuery UI CSS (optional) --&gt;
+      &lt;link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"&gt;
+
+      &lt;!-- Google Open Sans web font --&gt;
+      &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet"&gt;
 
       &lt;!-- Font Awesome Web Icons --&gt;
-      &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
+      &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
 
    &lt;/head&gt;
    &lt;body&gt;
@@ -260,7 +268,11 @@
 
 
       &lt;!-- jQuery Javascript Library (required by Bootstrap) --&gt;
-      &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;
+      &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;
+
+      &lt;!-- jQuery UI Library (optional) --&gt;
+      &lt;script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"&gt;&lt;/script&gt;
+
       &lt;!-- Bootstrap Library --&gt;
       &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"&gt;&lt;/script&gt;
 
@@ -284,16 +296,32 @@
                   <!-- Step 1 ---------------------------------------------------------------------- -->
 
                   <div class="col-md-1">
-                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'>2</h1>
+                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'><i class="fa fa-check" aria-hidden="true"></i></h1>
                   </div>
                   <!-- col-md-1 -->
 
                   <div class="col-md-11">
 
                      <h2>Add a Container <small style="color: grey">(wrapper)</small></h2>
-                     <p class="lead">The 12-column Bootstrap grid is built by stacking limitless <strong>rows</strong> inside of a single wrapping <strong>container</strong>. (You may nest containers, though typically you'll add a single container, with multiple rows inside of it.)</p>
+                     <p class="lead">The 12-column <a href="https://getbootstrap.com/docs/3.3/examples/grid/" target="_blank">Bootstrap grid</a> is typically built by stacking <code>.rows</code> inside of a single wrapping <code>.container</code>. You may nest containers as well for additional padding.</p>
 
-                     <p class="lead">If whitespace is not your thing, use a full-width layout by changing the class of your wrapping container from <code>class="container"</code> to <code>class="container-fluid"</code>.</p>
+                     <p class="lead">Choose a container width:</p>
+                     <table class='table'>
+                        <thead></thead>
+                        <tbody>
+                           <tr>
+                              <td style='width:35%'><img src="img/container.png" class="img img-responsive" alt="image of the regular container class"></td>
+                              <td style='width:33%'><code>.container</code></td>
+                              <td style='width:32%'>Centered, padding left and right</td>
+                           </tr>
+                           <tr>
+                              <td><img src="img/container-fluid.png" class="img img-responsive" alt="image of the container-fluid class"></td>
+                              <td><code>.container-fluid</code></td>
+                              <td>Full-width, no padding</td>
+                           </tr>
+                        </tbody>
+                     </table>
+
 
                      <div class="well">
 
@@ -309,26 +337,40 @@
 
                      </div>
 
+<h5 class="text-center">OR</h5>
+                     <div class="well">
+
+                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well1b" data-toggle="tooltip" data-placement="left" title="copy HTML">
+                                       <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                       </button>
+
+<pre class="prettyprint linenums" id="well1b">
+&lt;div class="container-fluid"&gt;
+   &lt!-- Your rows go here --&gt;
+&lt;/div&gt;
+</pre>
+
+                     </div>
+
                   </div>
                   <!-- col-md-11 -->
 
                </div>
                <!-- row -->
 
-
                <div class="row topper" id="sec3">
 
                   <!-- Step 1 ---------------------------------------------------------------------- -->
 
                   <div class="col-md-1">
-                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'>3</h1>
+                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'><i class="fa fa-check" aria-hidden="true"></i></h1>
                   </div>
                   <!-- col-md-1 -->
 
                   <div class="col-md-11">
 
                      <h2>Add a Jumbotron</h2>
-                     <p class="lead">Let's add a Jumbotron to the top of the page. To remove its rounded corners and force the jumbotron to take up the full width of the screen, add it before the main <code>.container</code> div.</p>
+                     <p class="lead">Let's add a <a href="https://getbootstrap.com/docs/3.3/components/#jumbotron" target="_blank">Jumbotron</a> to the top of the page. To remove its rounded corners and force the jumbotron to take up the full width of the screen, add it before the main <code>.container</code> div.</p>
 
 
 
@@ -338,18 +380,15 @@
                                        <i class="fa fa-clipboard" aria-hidden="true"></i>
                                        </button>
 
-<pre class="prettyprint linenums" id="well2">
-&lt;div class="jumbotron"&gt;
-
-  &lt;h1&gt;Hello, world!&lt;/h1&gt;
-
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing.&lt;/p&gt;
-  &lt;p&gt;
-     &lt;a class="btn btn-primary btn-lg" href="#" role="button"&gt;Learn more&lt;/a&gt;
-  &lt;/p&gt;
-
-&lt;/div&gt;
-</pre>
+               <pre class="prettyprint linenums" id="well2">
+               &lt;div class="jumbotron"&gt;
+               &lt;div class="container"&gt;
+               &lt;h1&gt;Hello, world!&lt;/h1&gt;
+               &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing.&lt;/p&gt;
+               &lt;p&gt;&lt;a class="btn btn-primary btn-lg" href="#" role="button"&gt;Learn more&lt;/a&gt;&lt;/p&gt;
+               &lt;/div&gt;
+               &lt;/div&gt;
+               </pre>
 
                      </div>
 
@@ -359,19 +398,106 @@
                </div>
                <!-- row -->
 
+               <div class="row topper" id="sec2b">
+
+                  <!-- Step 1 ---------------------------------------------------------------------- -->
+
+                  <div class="col-md-1">
+                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'><i class="fa fa-check" aria-hidden="true"></i></h1>
+                  </div>
+                  <!-- col-md-1 -->
+
+                  <div class="col-md-11">
+
+                     <h2>Add a Navbar</h2>
+                     <p class="lead">Let's add a navbar to the very top of the page. To shift the navbar darker, add the <code>.navbar-inverse</code> class.</p>
+
+
+
+                     <div class="well">
+
+                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well2b" data-toggle="tooltip" data-placement="left" title="copy HTML">
+                                       <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                       </button>
+
+<pre class="prettyprint linenums" id="well2b">
+&lt;nav class="navbar navbar-default"&gt;
+&lt;div class="container-fluid"&gt;
+&lt;!-- Brand and toggle get grouped for better mobile display --&gt;
+&lt;div class="navbar-header"&gt;
+   &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"&gt;
+     &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+     &lt;span class="icon-bar"&gt;&lt;/span&gt;
+     &lt;span class="icon-bar"&gt;&lt;/span&gt;
+     &lt;span class="icon-bar"&gt;&lt;/span&gt;
+   &lt;/button&gt;
+   &lt;a class="navbar-brand" href="#"&gt;Brand&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
+&lt;div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"&gt;
+   &lt;ul class="nav navbar-nav"&gt;
+     &lt;li class="active"&gt;&lt;a href="#"&gt;Link &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+     &lt;li class="dropdown"&gt;
+      &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+      &lt;ul class="dropdown-menu"&gt;
+         &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+         &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+         &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+     &lt;/li&gt;
+   &lt;/ul&gt;
+   &lt;form class="navbar-form navbar-left"&gt;
+     &lt;div class="form-group"&gt;
+      &lt;input type="text" class="form-control" placeholder="Search"&gt;
+     &lt;/div&gt;
+     &lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
+   &lt;/form&gt;
+   &lt;ul class="nav navbar-nav navbar-right"&gt;
+     &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+     &lt;li class="dropdown"&gt;
+      &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+      &lt;ul class="dropdown-menu"&gt;
+         &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+         &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+     &lt;/li&gt;
+   &lt;/ul&gt;
+&lt;/div&gt;&lt;!-- /.navbar-collapse --&gt;
+&lt;/div&gt;&lt;!-- /.container-fluid --&gt;
+&lt;/nav&gt;
+</pre>
+
+                     </div>
+
+                  </div>
+                  <!-- col-md-11 -->
+
+               </div>
+
+
+
                <div class="row topper" id="sec4">
 
                   <!-- Step 1 ---------------------------------------------------------------------- -->
 
                   <div class="col-md-1">
-                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'>4</h1>
+                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'><i class="fa fa-check" aria-hidden="true"></i></h1>
                   </div>
                   <!-- col-md-1 -->
 
                   <div class="col-md-11">
 
                      <h2>Add Rows</h2>
-                     <p class="lead">Add a row with 4 columns (for a large monitor), 2 columns (for a medium device), and 1 column (for a small device) inside the <strong>container</strong> div.</p>
+                     <p class="lead">To add content in Bootstrap, you'll need to use the 12-column Bootstrap grid. Let's add a row with 4 columns (for a large monitor), 2 columns (for a medium device), and 1 column (for a small device) inside the <strong>container</strong> div.</p>
 
                      <div class="well">
 
@@ -379,27 +505,23 @@
                                        <i class="fa fa-clipboard" aria-hidden="true"></i>
                                        </button>
 
-<pre class="prettyprint linenums" id="well3">
+                        <pre class="prettyprint linenums" id="well3">
 &lt;div class="row"&gt;
 
    &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt;
-      &lt!-- Your Add a thumbnail --&gt;
-      Lorem ipsum dolor.
+      FIRST COLUMN--Lorem ipsum dolor sit amet, consectetur adipisicing elit.
    &lt;/div&gt;
 
    &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt;
-      &lt!-- Your Add a thumbnail --&gt;
-      Lorem ipsum dolor.
+      SECOND COLUMN--Lorem ipsum dolor sit amet, consectetur adipisicing elit.
    &lt;/div&gt;
 
    &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt;
-      &lt!-- Your middle Column Content Goes Here --&gt;
-      Lorem ipsum dolor.
+      THIRD COLUMN--Lorem ipsum dolor sit amet, consectetur adipisicing elit.
    &lt;/div&gt;
 
    &lt;div class="col-sm-12 col-md-6 col-lg-3"&gt;
-      &lt!-- Your right Column Content Goes Here --&gt;
-      Lorem ipsum dolor.
+      FOURTH COLUMN--Lorem ipsum dolor sit amet, consectetur adipisicing elit.
    &lt;/div&gt;
 
 &lt;/div&gt;
@@ -414,19 +536,17 @@
                <!-- row -->
 
 
-
                <div class="row topper" id="sec5">
-                  <!-- Step 2 ---------------------------------------------------------------------- -->
 
                   <div class="col-md-1">
-                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'>5</h1>
+                     <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'><i class="fa fa-check" aria-hidden="true"></i></h1>
                   </div>
                   <!-- col-md-1 -->
 
                   <div class="col-md-11">
 
-                     <h2>Don't Forget The Navigation!</h2>
-                     <p class="lead">Add the navigation element to the page. To shift the navbar darker, add the <code>.navbar-inverse</code> class.</p>
+                     <h2>Add UI Elements</h2>
+                     <p class="lead">Bootstrap UI elements can be found under the <strong>CSS</strong>, <strong>Components</strong>, and <strong>Javascript</strong> tabs on the <a href="https://getbootstrap.com/docs/3.3/" target="_blank">Bootstrap documentation</a>. (You can find my Bootstrap-builder tools in our Library Guides Handbook under <a href="https://randal-sean-harrison.github.io/handbook/" target="_blank">Features</a>.)</p>
                      <div class="well">
 
                         <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well4" data-toggle="tooltip" data-placement="left" title="copy HTML">
@@ -434,24 +554,29 @@
                                        </button>
 
 <pre class="prettyprint linenums" id="well4">
-&lt;nav class="navbar"&gt;
-   &lt;div class="container"&gt;
+&lt;form&gt;
+   &lt;div class="form-group"&gt;
+      &lt;label for="exampleInputEmail1"&gt;Email address&lt;/label&gt;
+      &lt;input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"&gt;
+   &lt;/div&gt;
+   &lt;div class="form-group"&gt;
+      &lt;label for="exampleInputPassword1"&gt;Password&lt;/label&gt;
+      &lt;input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"&gt;
+   &lt;/div&gt;
+   &lt;div class="form-group"&gt;
+      &lt;label for="exampleInputFile"&gt;File input&lt;/label&gt;
+      &lt;input type="file" id="exampleInputFile"&gt;
+      &lt;p class="help-block"&gt;help text here.&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class="checkbox"&gt;
+      &lt;label&gt;
+      &lt;input type="checkbox"&gt; Check me out
+      &lt;/label&gt;
+   &lt;/div&gt;
 
-     &lt;div class="navbar-header"&gt;
-       &lt;a class="navbar-brand" href="#"&gt;MY COOL WEBSITE&lt;/a&gt;
-     &lt;/div&gt; &lt;!-- .navbar-header --&gt;
+   &lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
 
-     &lt;div id="navbar"&gt;
-       &lt;ul class="nav navbar-nav pull-right"&gt;
-         &lt;li class="active"&gt;&lt;a href="index.html"&gt;About&lt;/a&gt;&lt;/li&gt;
-         &lt;li&gt;&lt;a href="teaching.html"&gt;Teaching&lt;/a&gt;&lt;/li&gt;
-         &lt;li&gt;&lt;a href="research.html"&gt;Research&lt;/a&gt;&lt;/li&gt;
-         &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-       &lt;/ul&gt;
-     &lt;/div&gt;
-
-   &lt;/div&gt; &lt;!-- .container --&gt;
-&lt;/nav&gt; &lt;!-- .nav --&gt;
+&lt;/form&gt;
 </pre>
 
                      </div>
@@ -461,44 +586,6 @@
 
                </div>
                <!-- row -->
-
-
-<div class="row topper" id="sec6">
-
-   <!-- Step 6 ---------------------------------------------------------------------- -->
-
-   <div class="col-md-1">
-      <h1 class='short-round center-block white' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #6f5499'>6</h1>
-   </div>
-   <!-- col-md-1 -->
-
-   <div class="col-md-11">
-
-      <h2>Design Challenge <small><span class='label label-default'>Optional</span></small></h2>
-      <p class="lead">You may take this time to explore the Bootstrap Documentation and experiment with adding specific interface elements.</p>
-      <h3>OR</h3>
-      <p class="lead">You may attempt to recreate the page structure below using elements we've worked with in this workshop, as well pulling code for any additional elements you need from the Bootstrap Documentation.</p>
-      <div class="example">
-
-
-         <button id="hint-button" style="margin-bottom: 25px" class="btn btn-primary pull-right" type="button" data-toggle="tooltip" data-placement="left" title="Get Hint">
-         <i id="visibility-indicator" class="fa fa-eye" aria-hidden="true"></i>
-         </button>
-
-         <img id="image-before" class="img img-responsive" src="img/before.png" alt="image of the challenge web page">
-         <img id="image-after" class="img img-responsive hidden" src="img/after.png" alt="blocked out image of the challenge web page">
-
-      </div>
-
-
-
-   </div>
-   <!-- col-md-11 -->
-
-</div>
-<!-- .row -->
-
-
 
 
             </div>
@@ -591,8 +678,6 @@
       $(function() {
          $('[data-toggle="tooltip"]').tooltip()
       })
-
-
    </script>
 
 
